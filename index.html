@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mi pasantía en Rebi Tecnología</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F3F6F9; --surface:#FFFFFF; --ink:#12263A; --muted:#4A5F73;
+  --accent:#0E7C86; --accent-soft:#D6EEF0; --line:#D5DEE7; --hero:#12263A; --hero-ink:#F3F6F9; --hero-accent:#6FD3DB;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0D1620; --surface:#15222F; --ink:#E8EEF4; --muted:#9BB0C3;
+    --accent:#6FD3DB; --accent-soft:#173842; --line:#26384A; --hero:#0A121A; --hero-ink:#E8EEF4; --hero-accent:#6FD3DB;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0D1620; --surface:#15222F; --ink:#E8EEF4; --muted:#9BB0C3;
+  --accent:#6FD3DB; --accent-soft:#173842; --line:#26384A; --hero:#0A121A; --hero-ink:#E8EEF4; --hero-accent:#6FD3DB;
+}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--ink);font-family:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65;font-size:1.05rem}
+h1,h2,h3{font-family:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;line-height:1.1;letter-spacing:-.02em}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+
+.hero{background:var(--hero);color:var(--hero-ink);padding:clamp(3rem,9vw,7rem) 1.5rem clamp(3rem,7vw,5rem)}
+.wrap{max-width:960px;margin:0 auto}
+.hero h1{font-size:clamp(2.6rem,8vw,5.5rem);font-weight:800;max-width:14ch}
+.hero h1 span{color:var(--hero-accent)}
+.hero p{margin-top:1.5rem;max-width:58ch;font-size:1.15rem;opacity:.9}
+.chips{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:2rem}
+.chip{border:1.5px solid var(--hero-accent);color:var(--hero-accent);padding:.35rem .9rem;border-radius:999px;font-size:.92rem}
+
+section{padding:clamp(2.5rem,6vw,4.5rem) 1.5rem}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:1rem}
+.lead{max-width:65ch;color:var(--muted)}
+
+.company{display:grid;gap:1.5rem;grid-template-columns:1fr;margin-top:1.5rem}
+@media(min-width:760px){.company{grid-template-columns:1.3fr 1fr}}
+.note{background:var(--accent-soft);border-left:5px solid var(--accent);padding:1.4rem 1.5rem;border-radius:4px 14px 14px 4px}
+.note h3{font-size:1.2rem;margin-bottom:.5rem}
+
+.timeline{margin-top:2rem;display:grid;gap:1.5rem}
+@media(min-width:800px){.timeline{grid-template-columns:1fr 1fr}}
+.week{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:1.8rem}
+.week h3{font-size:1.6rem;color:var(--accent);margin-bottom:.4rem}
+.week .sub{color:var(--muted);margin-bottom:1rem}
+.week ul{list-style:none;padding:0;display:grid;gap:.9rem}
+.week li{padding-left:1.6rem;position:relative}
+.week li::before{content:"";position:absolute;left:0;top:.6em;width:.7rem;height:.7rem;border-radius:50%;background:var(--accent)}
+.week li strong{display:block}
+
+.learn{background:var(--surface);border-block:1px solid var(--line)}
+.learn-grid{display:grid;gap:1.2rem;margin-top:1.5rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.learn-grid div{border-top:3px solid var(--accent);padding-top:.8rem}
+.learn-grid h3{font-size:1.15rem;margin-bottom:.3rem}
+.learn-grid p{color:var(--muted);font-size:.98rem}
+
+.close{max-width:65ch}
+footer{padding:2rem 1.5rem 3rem;color:var(--muted);text-align:center;font-size:.92rem}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Mi pasantía en <span>Rebi Tecnología</span></h1>
+    <p>Durante dos semanas trabajé en una empresa que crea páginas web y desarrollé, de principio a fin, el sitio web de una empresa de asesoría financiera. Aquí cuento cómo fue el proceso.</p>
+    <div class="chips">
+      <span class="chip">Diseño web</span>
+      <span class="chip">Programación</span>
+      <span class="chip">Asesoría financiera</span>
+      <span class="chip">Redes sociales</span>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>La empresa y mi proyecto</h2>
+    <p class="lead">Rebi Tecnología es una empresa dedicada a crear páginas web para negocios y emprendedores. Su trabajo es ayudar a que cada cliente tenga una presencia digital profesional, clara y fácil de usar.</p>
+    <div class="company">
+      <p class="lead">Mi tarea principal fue hacer una página web completa para un cliente del sector financiero: una empresa de asesoría financiera. Este tipo de página debe transmitir confianza y seriedad, explicar bien los servicios y facilitar que los visitantes contacten a los asesores. Por eso, cada decisión de diseño y de contenido tenía que pensarse con ese objetivo.</p>
+      <div class="note">
+        <h3>Objetivo del proyecto</h3>
+        <p>Entregar una página web terminada, ordenada y acorde a lo que el cliente pidió, en solo dos semanas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Cómo fueron mis dos semanas</h2>
+    <p class="lead">El trabajo se dividió en dos etapas: primero planear y empezar a construir, y después terminar el desarrollo y apoyar en otras áreas.</p>
+    <div class="timeline">
+      <article class="week">
+        <h3>Semana 1</h3>
+        <p class="sub">Planificación y arranque</p>
+        <ul>
+          <li><strong>Búsqueda de plantillas</strong>Revisé distintas plantillas para encontrar una base visual que encajara con una empresa de asesoría financiera.</li>
+          <li><strong>Recopilación de información</strong>Reuní los datos sobre cómo quería el cliente su página: estilo, secciones, textos y servicios a mostrar.</li>
+          <li><strong>Boceto de la página</strong>Hice un boceto sencillo para definir dónde iría cada elemento antes de programar.</li>
+          <li><strong>Inicio de la programación</strong>Con el boceto listo, comencé a construir la página.</li>
+        </ul>
+      </article>
+      <article class="week">
+        <h3>Semana 2</h3>
+        <p class="sub">Desarrollo final y apoyo</p>
+        <ul>
+          <li><strong>Fin de la programación</strong>Terminé de programar todas las secciones y dejé la página completa y funcionando.</li>
+          <li><strong>Apoyo en redes sociales</strong>Ayudé con tareas relacionadas con las redes sociales de la empresa, complementando la presencia digital del proyecto.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="learn">
+  <div class="wrap">
+    <h2>Lo que me llevo de esta experiencia</h2>
+    <div class="learn-grid">
+      <div>
+        <h3>Trabajar con clientes</h3>
+        <p>Escuchar lo que la persona quiere y convertirlo en una página real.</p>
+      </div>
+      <div>
+        <h3>Planificar antes de programar</h3>
+        <p>Buscar referencias y hacer un boceto ahorra tiempo y evita errores.</p>
+      </div>
+      <div>
+        <h3>Desarrollo web completo</h3>
+        <p>Vi el proceso entero: desde la idea hasta la página terminada.</p>
+      </div>
+      <div>
+        <h3>Web y redes juntas</h3>
+        <p>Una buena página funciona mejor cuando va acompañada de redes sociales.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap close">
+    <h2>Conclusión</h2>
+    <p class="lead">Mi pasantía en Rebi Tecnología me permitió vivir cómo se hace un proyecto web real. En dos semanas pasé de buscar plantillas y hacer un boceto a entregar una página completa para una empresa de asesoría financiera, y además colaboré con sus redes sociales. Fue una experiencia práctica que me mostró cómo se trabaja en una empresa de tecnología.</p>
+  </div>
+</section>
+
+<footer>Pasantía en Rebi Tecnología</footer>
+
+</body>
+</html>
